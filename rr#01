@@ -1,0 +1,32 @@
+// examples of structure in c language
+#include <stdio.h>
+struct student{
+    char name[30];
+    int roll;
+    char stream[30];
+};
+int main()
+{
+ struct student std[3];
+
+    for(int i=0;i<3;i++ )
+    {
+        printf("student %d  \n" , i+1);
+        printf("name :- ");
+        scanf("%s",std[i].name);getchar();
+        printf("roll :- ");
+        scanf("%d",&std[i].roll);getchar();
+        printf("stream :- ");
+        scanf("%s",std[i].stream);getchar();
+        printf("\n");
+   }
+        printf("-----all students detail--------\n" );
+        for(int i=0;i<3;i++ )
+        {
+        printf("%s\n",std[i].name);
+        printf("%d\n",std[i].roll);
+        printf("%s\n",std[i].stream);
+        printf("\n");
+        }
+    return 0;
+}
